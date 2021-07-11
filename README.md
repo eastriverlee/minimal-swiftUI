@@ -17,9 +17,10 @@ an entry point file with `@main` attribute of any name except for `main.swift`.
 a separate file for `@main` attribute to work.  
 you need at least two files for `@main`.
 ### `makefile`
-a makefile that builds a macOS app to run cleanly.  
+a makefile that packages a macOS app to run cleanly  
+by just moving the compiled execution file to `example.app/Contents/MacOS`.  
 
-however, simple executable also works:
+however, running a plain executable also works:
 ```zsh
 swiftc src/*.swift && ./main
 ```
