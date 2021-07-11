@@ -25,3 +25,4 @@ swiftc src/*.swift && ./main
 ```
 still, running a binary file directly in macOS opens up a terminal  
 and focuses on that window instead of the intended program window.
+`.onDisappear { exit(0) }` in `entry.swift` is only required for binary file execution.
