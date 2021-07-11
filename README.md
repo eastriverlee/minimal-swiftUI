@@ -19,7 +19,7 @@ a separate file for `@main` attribute to work.
 you need at least two files for `@main`.
 ### `makefile`
 a makefile that packages a macOS app to run cleanly  
-by just moving the compiled execution file to `example.app/Contents/MacOS`.  
+by just moving the compiled execution file to `minimal-swiftUI.app/Contents/MacOS`.  
 
 however, running a plain executable also works:
 ```zsh
