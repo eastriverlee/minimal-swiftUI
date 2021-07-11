@@ -6,8 +6,9 @@ make
 ```
 
 # about
+![screenshot of an application that says hello world](https://github.com/eastriverlee/minimal-swiftUI/blob/master/screenshot.png?raw=true)
 this is a minimal swiftUI app example for **bloated** xcode haters.  
-*(i made this in terminal using vim to test if it is possible to make a GUI app without xcode)*  
+*(i made this in terminal using vim to test if it is manageable to make a GUI app without xcode)*  
 i hope this brings the better future for mac GUI developement.
 
 # how it works
