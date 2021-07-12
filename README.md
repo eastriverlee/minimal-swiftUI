@@ -27,4 +27,28 @@ swiftc src/*.swift && ./main
 ```
 still, running a binary file directly in macOS opens up a terminal  
 and focuses on that window instead of the intended program window.
+making it more suitable for debugging purpose.
 `.onDisappear { exit(0) }` in `entry.swift` is only required for binary file execution.
+
+thus, makefile below can be the real-world example:
+```makefile
+NAME=recorder
+SRC=src/*.swift
+
+$(NAME): $(SRC)
+	swiftc -o $(NAME) $(SRC)
+	mkdir -p $(NAME).app/Contents/MacOS/
+	mv $(NAME) $(NAME).app/Contents/MacOS/
+	open $(NAME).app
+
+debug: $(SRC)
+	swiftc $(SRC) && ./main
+
+clean:
+	rm -rf $(NAME).app
+	rm main
+
+re: clean $(NAME)
+
+.PHONY: debug clean re
+```
