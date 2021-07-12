@@ -32,7 +32,7 @@ making it more suitable for debugging purpose instead.
 
 thus, makefile below can be the real-world example:
 ```makefile
-NAME=recorder
+NAME=minimal-swiftUI
 SRC=src/*.swift
 
 $(NAME): $(SRC)
